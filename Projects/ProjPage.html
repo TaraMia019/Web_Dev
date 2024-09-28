@@ -1,68 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Page</title>
-</head>
-<body style="background-color: #9a8f86; font-family: 'Times New Roman', Times, serif; margin: 20px; line-height: 1.5; text-align: center; color: rgb(0, 0, 0);">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
 
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px auto;
+            background-color: #ffffff;
+        }
+
+        td, th {
+            border: 2px solid #6b705c;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #5b4c3d;
+            color: white;
+            font-size: 18px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #d6d6d6;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #a79a80;
+            color: white;
+        }
+
+        h2 {
+            color: #5b4f3d;
+            font-size: 36px;
+            margin-top: 30px;
+        }
+
+        a {
+            color: #5b4f3d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #f1e8b8;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
     <div>
-        <h2 style="font-size: 30px;">Projects Page</h2>
-        <a href="Bernardo_Portfolio.html" style="font-size: 20px; text-decoration: none; color: blue;">HOME</a>
+        <h2>Projects Page</h2>
     </div>
 
-    <table border="1" cellpadding="10" cellspacing="0" width="90%" style="margin-top: 20px; background-color: #e9d9c5;">
+    <table>
         <tr>
-            <th style="background-color: #e9d9c5;">Project</th>
-            <th style="background-color: #e9d9c5;">Description</th>
-            <th style="background-color: #e9d9c5;">Used Technology</th>
-            <th style="background-color: #e9d9c5;">Link</th>
+            <th>Project</th>
+            <th>Description</th>
+            <th>Used Technology</th>
+            <th>Link</th>
         </tr>
         <tr>
             <td>Flappy Bird in C</td>
-            <td>This C program is a console-based Flappy Bird game. The game features simple ASCII graphics,
-                gravity mechanics, and collision detection.</td>
+            <td>This C program is a console-based Flappy Bird game. The game features simple ASCII graphics, gravity mechanics, and collision detection.</td>
             <td>Laptop, Computer</td>
-            <td><a href="FlappyBird.txt">Flappy Bird Source Code</a></td>
+            <td><a href="FlappyBird.txt" title="FlappyBirdCode">Flappy Bird Source Code</a></td>
         </tr>
         <tr>
             <td>Compression in C++</td>
-            <td>This C++ program implements Huffman coding to compress text files by generating binary 
-                representations of characters based on their frequencies. It also converts the compressed 
-                binary data back to ASCII for verification.</td>
+            <td>This C++ program implements Huffman coding to compress text files by generating binary representations of characters based on their frequencies. It also converts the compressed binary data back to ASCII for verification.</td>
             <td>Laptop</td>
-            <td><a href="compression.txt">Compression in C++ Source Code</a></td>
+            <td><a href="compression.txt" title="C++ Compression">Compression in C++ Source Code</a></td>
         </tr>
         <tr>
             <td>Decompression in C++</td>
-            <td>This C++ program implements Huffman decoding to reconstruct original text from compressed 
-                binary data. It reads a Huffman tree and a compressed file, decodes the binary data back into text, 
-                and saves the decompressed result to an output file.</td>
+            <td>This C++ program implements Huffman decoding to reconstruct original text from compressed binary data. It reads a Huffman tree and a compressed file, decodes the binary data back into text, and saves the decompressed result to an output file.</td>
             <td>Laptop</td>
-            <td><a href="decompression.txt">Decompression in C++ Source Code</a></td>
+            <td><a href="decompression.txt" title="C++ Decompression">Decompression in C++ Source Code</a></td>
         </tr>
         <tr>
             <td>Bank Account in Java</td>
-            <td>This Java program features a BankAccount class and subclasses SavingsAccount and CheckingAccount
-                for managing interest and overdrafts. The AccountDriver class simulates user interactions with these accounts.</td>
+            <td>This Java program features a BankAccount class and subclasses SavingsAccount and CheckingAccount for managing interest and overdrafts. The AccountDriver class simulates user interactions with these accounts.</td>
             <td>Laptop</td>
             <td>
-                <a href="Account_Driver.txt">Account Driver in Java Source Code</a><br>
-                <a href="Bank_Acc.txt">Bank Account in Java Source Code</a><br>
-                <a href="Checking_Acc.txt">Checking Account in Java Source Code</a><br>
-                <a href="Savings_Acc.txt">Savings Account in Java Source Code</a>
+                <a href="Account_Driver.txt" title="Account Driver">Account Driver in Java Source Code</a><br>
+                <a href="Bank_Acc.txt" title="Bank Account">Bank Account in Java Source Code</a><br>
+                <a href="Checking_Acc.txt" title="Checking Account">Checking Account in Java Source Code</a><br>
+                <a href="Savings_Acc.txt" title="Savings Account">Savings Account in Java Source Code</a>
             </td>
         </tr>
         <tr>
             <td>Figma</td>
-            <td>Creating an app in Figma involves designing user interfaces (UI) by utilizing its vector graphics tools, components, 
-                and layout grids. Users can collaborate in real-time, prototype interactions, and create design systems to ensure 
-                consistency across the app, all while providing an intuitive user experience.</td>
+            <td>Creating an app in Figma involves designing user interfaces (UI) by utilizing its vector graphics tools, components, and layout grids. Users can collaborate in real-time, prototype interactions, and create design systems to ensure consistency across the app, all while providing an intuitive user experience.</td>
             <td>Laptop, Cellphone</td>
             <td><a href="https://www.figma.com/proto/7BvTJl4Y5fXDQM6HE5XQMH/Group-4?node-id=27-5&starting-point-node-id=6%3A4">Visit Our Work!</a></td>
         </tr>
     </table>
-
 </body>
 </html>
