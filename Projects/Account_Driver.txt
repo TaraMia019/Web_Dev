@@ -1,0 +1,39 @@
+package sample;
+
+public class AccountDriver {
+
+    public static void main(String[] args) {
+        CheckingAccount checkingAccount = new CheckingAccount("Benjamin Franklin", 1000.00);
+        System.out.println(checkingAccount);
+
+        checkingAccount.deposit(500.00);
+        System.out.println("After deposit of $500.00, balance = $"  + String.format("%.2f", checkingAccount.getBalance()));
+
+        boolean withdrawSuccess = checkingAccount.withdraw(1000.00);
+        System.out.println("After withdrawal of $1000.00, balance = $" + String.format("%.2f", checkingAccount.getBalance()));
+
+        SavingsAccount savingsAccount1 = new SavingsAccount("William Shakespeare", 400.00);
+        System.out.println("\n" + savingsAccount1);
+
+        savingsAccount1.deposit(500.00);
+        System.out.println("After deposit of $500.00, balance = $" + String.format("%.2f", savingsAccount1.getBalance()));
+
+        boolean insufficientFunds = savingsAccount1.withdraw(1000.00);
+        System.out.println("Insufficient funds to withdraw $1000.00, balance = $" + String.format("%.2f", savingsAccount1.getBalance()));
+
+        savingsAccount1.postInterest();
+        System.out.println("After monthly interest has been posted, balance = $" + String.format("%.2f", savingsAccount1.getBalance()));
+
+        SavingsAccount savingsAccount2 = new SavingsAccount(savingsAccount1, 5.00);
+        System.out.println("\n" + savingsAccount2);
+
+        savingsAccount2.deposit(500.00);
+        System.out.println("After deposit of $500.00, balance = $" + String.format("%.2f", savingsAccount2.getBalance()));
+
+        insufficientFunds = savingsAccount2.withdraw(1000.00);
+        System.out.println("Insufficient funds to withdraw $1000.00, balance = $" + String.format("%.2f", savingsAccount2.getBalance()));
+
+        CheckingAccount isaacAccount = new CheckingAccount("Isaac Newton", 1000.00);
+        System.out.println("\n" + isaacAccount);
+    }
+}
